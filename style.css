@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #881D1D;
+}
+
+
+/*BUTTON CSS*/
+
+button {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #272222;
+}
+
+
+/*TABLE CSS*/
+
+table,
+th,
+td {
+    border: 1px solid white;
+}
+
+
+/*DEFAULT COLUMN, CONTENT & NAV CSS*/
+
+.container {
+    display: flex;
+}
+
+.col2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+}
+
+.navigator {
+    padding: 20px;
+}
+
+.navigator p {
+    color: white;
+    font-size: 20px;
+}
+
+.link {
+    display: flex;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}

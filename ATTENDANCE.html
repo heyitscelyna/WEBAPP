@@ -4,67 +4,84 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Management System - Attendance</title>
 
 </head>
 <body>
+     <div class="navbar">
+        <a>MANAGEMENT SYSTEM<a>
+        <div class="logout">
+            <a href="LOGIN.html">LOGOUT</a> 
+        </div>
+    </div>
 
   <div class="container">
     <div class="col">
       <div class="navigator">
-        <p>MANAGEMENT SYSTEM <a href="LOGIN.html"><button>LOGOUT</button> </a> <p>
-        <a href="HOMEPAGE.html"> <button>HOME</button> </a> 
+        <p>MANAGEMENT SYSTEM <a href="LOGIN.html">  <button> LOGOUT</button> </a> <p>
+            <a href="HOMEPAGE.html"> <button class="navs">HOME <span class="arrow right"></span> </button> </a>
         <div>
-            <a href="ATTENDANCE.html"> <button>ATTENDANCE LIST</button> </a>
+            <a href="ATTENDANCE.html"> <button class="navs">ATTENDANCE LIST <span class="arrow right"></span></button>  </a>
         </div>
         <br>
         <div>
-            <a href="PAYROLL.html"> <button>PAYROLL LIST</button> </a>
+            <a href="PAYROLL.html"> <button class="navs">PAYROLL LIST <span class="arrow right"></span> </button></a>
         </div>
         <br>
         <div>
-            <a href="EMPLOYEE.html"> <button>EMPLOYEE LIST</button> </a>
+            <a href="EMPLOYEE.html"> <button class="navs">EMPLOYEE LIST <span class="arrow right"></span></button></a>
         </div>
       </div>
     </div>
-    
     <div class="col2">
       <div class="content">
-        <p> <a href="ATTENDANCE.html"> <button>ATTENDANCE LIST</button> </a> ATTENDANCE LIST</p>
-        <div><p>SEARCH NAME:<input type="text" placeholder=""><button>+ADD ATTENDANCEE</button></div>
+    <p>ATTENDANCE LIST</p>
+    <div><p>SEARCH NAME:<input type="text" placeholder=""><button>+SERCH</button></p>
         <table style="width:100%">
-          <tr>
-            <th>DATE</th>
-            <th>NAME</th>
-            <th>TIME RECORD</th>
-            <th>ACTION</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td> <button>DEL</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td> <button>DEL</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td> <button>DEL</button></td>
-          </tr>
-        
-        </table>
-      </div>
-    </div>
-   
+          <div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Date:</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label>Time In:</label>
+                        <input type="time" name="time" id="time">
+                    </div>
+                    <div>
+                        <label>Time Out:</label>
+                        <input type="time" name="time" id="time">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>NAME</th>
+                            <th>TIME</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                </table>
+        </div>
+    <script src="attendance.js"></script>
 </body>
 </html>
+
+
 
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Management System - Employee</title>
 
 </head>
@@ -14,9 +14,9 @@
     <div class="col">
       <div class="navigator">
         <p>MANAGEMENT SYSTEM <a href="LOGIN.html"><button>LOGOUT</button> </a> <p>
-        <a href="HOMEPAGE.html"> <button>HOME</button> </a> 
+        <a href="HOMEPAGE.html"> <button>HOME</button> </a>
         <div>
-            <a href="ATTENDANCE.html"> <button>ATTENDANCE LIST</button> </a>
+            <a href="ATTENDANCE.html"> <button> ATTENDANCE LIST</button> </a>
         </div>
         <br>
         <div>
@@ -28,52 +28,47 @@
         </div>
       </div>
     </div>
-
     <div class="col2">
       <div class="content">
-        <p> <a href="EMPLOYEE.html"> <button>EMPLOYEE LIST</button> </a>EMPLOYEE LIST <div><p> SEARCH NAME:<input type="text" placeholder=""><button>+ADD EMPLOYEE</button></p></p>
+    <p>EMPLOYEE LIST <div><p> SEARCH NAME:<input type="text" placeholder=""><button>SEARCH</button></p>
           <table style="width:100%">
-            <tr>
-              <th>FIRST NAME</th>
-              <th>MIDDLE NAME</th>
-              <th>LAST NAME</th>
-              <th>ACTION</th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>VIEW</button> <button>EDIT</button> <button>DEL</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>VIEW</button> <button>EDIT</button> <button>DEL</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>VIEW</button> <button>EDIT</button> <button>DEL</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>VIEW</button> <button>EDIT</button> <button>DEL</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>VIEW</button> <button>EDIT</button> <button>DEL</button></td>
-            </tr>
-          </table>
-      </div>
-    </div>
-  </div>
+          <hr>
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>First Name:</label>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div>
+                        <label>Middle Name:</label>
+                        <input type="text" name="middleName" id="middleName">
+                    </div>
+                    <div>
+                        <label>Last Name:</label>
+                        <input type="text" name="lastName" id="lastName">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>FIRST NAME</th>
+                            <th>MIDDLE NAME</th>
+                            <th>LAST NAME</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                </table>
+        </div>
+    <script src="employee.js"></script>
 </body>
 </html>
 

@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="login.css">
+
+</head>
+
 <body>
-<body style="background-color:#881D1D">
-<h1>MANAGEMENT SYSTEM</h1>
+  <main id="main-holder">
+    <h1 id="login-header">MANAGEMENT SYSTEM LOGIN</h1>
 
-<p>USERNAME:</p>
-<input type="text" name="x" id="email" placeholder="">
-<p>PASSWORD:</p>
-<input type="text" name="x" pass="pass" placeholder="">
-<div>
-</div>
-<a href="HOMEPAGE.html"> <button>Login</button> </a>
-<div>
-</div>
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
 
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+
+    </form>
+
+  </main>
+  <script src="login.js"></script>
 </body>
+
 </html>
